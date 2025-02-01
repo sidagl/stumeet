@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuMeet Landing Page</title>
+    <link rel="stylesheet" href="landingpage.css"> <!-- Linking to the CSS file -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="navbar-title">StuMeet</h1>
+        <div class="navbar-links">
+            <a href="#features" class="navbar-link">Features</a>
+            <a href="#contact" class="navbar-link">Contact</a>
+        </div>
+        <div class="navbar-buttons">
+            <button class="btn sign-up-btn">Sign Up</button>
+            <button class="btn theme-toggle-btn" id="theme-icon">☀️</button> <!-- Sun icon for light mode -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">Seamless Collaboration, Anytime, Anywhere.</h1>
+        <p class="hero-description">Experience the future of online meetings with StuMeet. Engage, share, and collaborate with ease.</p>
+        <div class="hero-buttons">
+            <button class="btn instant-meeting-btn">Start Instant Meeting</button>
+            <button class="btn join-meeting-btn">Join Meeting</button>
+            <div class="enter-link-btn">
+                <input type="text" id="link-code-input" placeholder="Enter Code or Link" class="link-code-input" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="features-container">
+            <h2 class="features-title">Key Features</h2>
+            <div class="features-list">
+                <div class="feature-card">
+                    <h3 class="feature-title">Video Calling</h3>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Screen Sharing</h3>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Whiteboard</h3>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Chat</h3>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Room Creation</h3>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Security</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const themeToggleButton = document.querySelector('.theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                themeIcon.textContent = '🌙'; // Moon icon for dark mode
+            } else {
+                themeIcon.textContent = '☀️'; // Sun icon for light mode
+            }
+        });
+    </script>
+
+</body>
+</html>
